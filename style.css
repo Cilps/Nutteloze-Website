@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+}
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 70px;
+    color: white;
+}
+h2 {
+    font-size: 60px;
+    color: white;
+}
+h3 {
+    font-size: 50px;
+    color: white;
+}
+h4 {
+    font-size: 40px;
+    color: white;
+}
+p {
+    font-size: 30px;
+    color: white;
+}
+marquee h3 {
+    width: fit-content;
+}
+.marquee_div {
+    width: 100%;
+}
+.title_h1 {
+    margin: auto;
+}
+.h3_div {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 370px;
+    cursor: default;
+    user-select: none;
+}
