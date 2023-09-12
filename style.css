@@ -33,6 +33,9 @@ marquee h3 {
 .marquee_div {
     width: 100%;
 }
+.color_div {
+    margin: auto;
+}
 .title_h1 {
     margin: auto;
 }

@@ -10,13 +10,17 @@
 
 <body>
     <main>
-        <h1 class="title_h1">NUTTELOZE WEBSITE</h1>
-        <div class="marquee_div">
+        <h1 class="title_h1 text">NUTTELOZE WEBSITE</h1>
+        <div class="marquee_div text">
             <marquee direction="left" scrollamount="10" behavior="alternate">
                 <div class="h3_div" onmouseover="hide_marquee_h3()" onmouseleave="show_marquee_h3()">
-                    <h3 id="marquee_h3">Klik me dan!</h3>
+                    <h3 id="marquee_h3" class="text">Klik me dan!</h3>
                 </div>
             </marquee>
+        </div>
+        <div class="color_div">
+            <h3 class="text">Kies een kleur:</h3>
+            <input type="color" id="color_input"/>
         </div>
     </main>
     <script src="script.js"></script>
