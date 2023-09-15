@@ -1,44 +1,71 @@
 body {
     background-color: black;
-}
-main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     font-family: sans-serif;
+    height: 100%;
+    overflow: hidden;
 }
+
+/* main {
+} */
+
 h1 {
     font-size: 70px;
     color: white;
 }
+
 h2 {
     font-size: 60px;
     color: white;
 }
+
 h3 {
     font-size: 50px;
     color: white;
 }
+
 h4 {
     font-size: 40px;
     color: white;
 }
+
 p {
     font-size: 30px;
     color: white;
 }
+footer {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    border-top: 3px solid white;
+    bottom: 0;
+}
+.footer_p {
+    margin: auto;
+    font-size: 20px;
+}
 marquee h3 {
     width: fit-content;
 }
+
 .marquee_div {
     width: 100%;
 }
-.color_div {
+
+.color_div,
+.iets_div,
+.dillemma_div,
+.title_h1, .dillema_p {
     margin: auto;
 }
 .title_h1 {
-    margin: auto;
+    width: fit-content !important;
 }
+.dillemma_div {
+    display: flex;
+    flex-direction: column;
+}
+
 .h3_div {
     display: flex;
     justify-content: center;
@@ -47,3 +74,139 @@ marquee h3 {
     cursor: default;
     user-select: none;
 }
+
+.iets_box {
+    position: absolute;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+}
+/* #region stickman */
+.stickman_div {
+    position: absolute;
+    height: 200px;
+    width: 140px;
+    left: 540px;
+    top: 400px;
+}
+.stickman_legs_div {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+.stickman_head_div {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: auto;
+}
+.stickman_middle {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+.stickman_left_arm_div {
+    position: absolute;
+    width: 5px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 30%;
+    transform: rotateZ(50deg);
+    margin-right: 95px;
+}
+.stickman_right_arm_div {
+    position: absolute;
+    width: 5px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 30%;
+    transform: rotateZ(-50deg);
+    margin-left: 95px;
+}
+.stickman_chest_div {
+    width: 50px;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: auto;
+}
+.stickman_left_leg_div {
+    position: absolute;
+    width: 5px;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 30%;
+    transform: rotateZ(25deg);
+    margin-right: 50px;
+}
+.stickman_right_leg_div {
+    position: absolute;
+    width: 5px;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 30%;
+    transform: rotateZ(-25deg);
+    margin-left: 50px;
+}
+/* #endregion */
+
+
+/* #region gestolen code voor stijl*/
+/* link: https://stackoverflow.com/questions/11167281/webkit-css-to-control-the-box-around-the-color-in-an-inputtype-color */
+
+input[type='color'] {
+    padding: 0;
+    width: 150%;
+    height: 150%;
+    margin: -25%;
+}
+
+.color_input_div {
+    margin: auto;
+    overflow: hidden;
+    width: 4em;
+    height: 4em;
+    /* optional formatting below here */
+    border: 3px dashed white;
+    animation: wiggle 2s linear infinite;
+}
+/* dit is gestolen van: https://blog.hubspot.com/website/css-animation-examples */
+@keyframes wiggle {
+
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        transform: rotateZ(-4deg);
+    }
+
+    40%,
+    100% {
+        transform: rotateZ(0);
+    }
+}
+/* #endregion */
