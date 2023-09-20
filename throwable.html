@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Throwable</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="http://benahm.github.io/jquery.throwable/javascripts/jquery.throwable.js" type="text/javascript"></script>
+    <script src="https://benahm.github.io/jquery.throwable/javascripts/jquery.throwable.js"
+        type="text/javascript"></script>
     <script src="script.js"></script>
 </head>
+
 <body>
     <h1 class="title_h1 text throwable">NUTTELOZE WEBSITE</h1>
     <div class="stickman_div stickman_throwable">
-        <div class="stickman_head_div"></div>
-        <div class="stickman_middle">
-            <div class="stickman_chest_div"></div>
-            <div class="stickman_left_arm_div"></div>
-            <div class="stickman_right_arm_div"></div>
+        <div class="stickman_head_div stickman"></div>
+        <div class="stickman_middle stickman">
+            <div class="stickman_chest_div stickman"></div>
+            <div class="stickman_left_arm_div stickman"></div>
+            <div class="stickman_right_arm_div stickman"></div>
         </div>
-        <div class="stickman_legs_div">
-            <div class="stickman_left_leg_div"></div>
-            <div class="stickman_right_leg_div"></div>
+        <div class="stickman_legs_div stickman">
+            <div class="stickman_left_leg_div stickman"></div>
+            <div class="stickman_right_leg_div stickman"></div>
         </div>
     </div>
+    <div class="color_div">
+        <div class="color_input_div">
+            <input type="color" id="color_input_throwable" />
+        </div>
+    </div>
+    <script>
+        var color_input = document.getElementById("color_input_throwable");
+
+        color_input.addEventListener("input", function () {
+            var color = color_input.value;
+            document.body.style.backgroundColor = color;
+            document.getElementsByClassName("color_input_div")[0].style.border = "3px double " + invertColor(color);
+            const collection = document.getElementsByClassName("text");
+            for (let i = 0; i < collection.length; i++) {
+                collection[i].style.color = invertColor(color);
+            }
+            const collection2 = document.getElementsByClassName("stickman");
+            for (let i = 0; i < collection2.length; i++) {
+                collection2[i].style.borderColor = invertColor(color);
+            }
+        }, false);
+
+        var color_input_div = document.getElementsByClassName("color_input_div")[0];
+        color_input_div.addEventListener("click", function () {
+            color_input_div.style.animation = "none";
+        })
+    </script>
 </body>
+
 </html>

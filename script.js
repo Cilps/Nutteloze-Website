@@ -4,22 +4,6 @@
 // function show_marquee_h3() {
 //   document.getElementById("marquee_h3").style.opacity = "1";
 // }
-// var color_input = document.getElementById("color_input");
-
-// color_input.addEventListener("input", function () {
-//   var color = color_input.value;
-//   document.body.style.backgroundColor = color;
-//   document.getElementsByClassName("color_input_div")[0].style.border = "3px double " + invertColor(color);
-//   const collection = document.getElementsByClassName("text");
-//   for (let i = 0; i < collection.length; i++) {
-//     collection[i].style.color = invertColor(color);
-//   }
-// }, false);
-
-// var color_input_div = document.getElementsByClassName("color_input_div")[0];
-// color_input_div.addEventListener("click", function () {
-//   color_input_div.style.animation = "none";
-// })
 
 var i = 0;
 function stickman_fall_apart() {
@@ -226,9 +210,6 @@ $(document).ready(function () {
     damping: 20
   });
 });
-$(document).on("collision", function (event, e1) {
-  $(e1).css("color", "red");
-});
 $(document).ready(function () {
   $(".victim").throwable({
     drag: false,
@@ -322,29 +303,29 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-  $("#circle,#box").throwable({
-    damping: 10, shape: "circle",
-    collisionDetection: true,
-    areaDetection: [[0, 0, 300, 300]]
-  });
-  $(document).on("collision", function (event, e1, e2) {
-    $(e1).css("background-color", "black");
-    $(e2).css("background-color", "black");
-    $("#notification").text("Collision between circle and box");
+//   $("#circle,#box").throwable({
+//     damping: 10, shape: "circle",
+//     collisionDetection: true,
+//     areaDetection: [[0, 0, 300, 300]]
+//   });
+//   $(document).on("collision", function (event, e1, e2) {
+//     $(e1).css("background-color", "black");
+//     $(e2).css("background-color", "black");
+//     $("#notification").text("Collision between circle and box");
 
-  });
-  $(document).on("nocollision", function () {
-    $("#circle,#box").css("background-color", "red");
-  });
+//   });
+//   $(document).on("nocollision", function () {
+//     $("#circle,#box").css("background-color", "red");
+//   });
 
-  $(document).on("inarea", function (event, data) {
-    $("#area").css("background-color", "blue");
-    $("#notification").text($(data[0]).text() + " enter the area");
-  });
-  $(document).on("outarea", function (event, data) {
-    $("#area").css("background-color", "green");
-    $("#notification").text($(data[0]).text() + " exit the area");
-  });
-});
+//   $(document).on("inarea", function (event, data) {
+//     $("#area").css("background-color", "blue");
+//     $("#notification").text($(data[0]).text() + " enter the area");
+//   });
+//   $(document).on("outarea", function (event, data) {
+//     $("#area").css("background-color", "green");
+//     $("#notification").text($(data[0]).text() + " exit the area");
+//   });
+// });

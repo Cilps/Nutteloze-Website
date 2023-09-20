@@ -60,6 +60,7 @@ marquee h3 {
 }
 .title_h1 {
     width: fit-content !important;
+    resize: none;
 }
 .dillemma_div {
     display: flex;
